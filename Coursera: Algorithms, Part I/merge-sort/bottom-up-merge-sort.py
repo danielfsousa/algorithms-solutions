@@ -7,7 +7,9 @@ def bottom_up_merge_sort(arr):
         while sz < N:
             low = 0
             while low < N - sz:
-                merge(arr, low, low + sz - 1, min(low + sz + sz - 1, N - 1))
+                mid = low + sz - 1
+                high = min(low + sz + sz, N - 1)
+                merge(arr, low, mid, high)
                 low += sz + sz
             sz += sz
 

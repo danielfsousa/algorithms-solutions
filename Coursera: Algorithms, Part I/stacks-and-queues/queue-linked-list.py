@@ -23,8 +23,14 @@ class Queue:
         self.first = None
         self.last = None
 
+    def __len__(self):
+        return self.length
+
     def __iter__(self):
         return QueueIterator(self)
+
+    def __str__(self):
+        return f'{str(self.__class__)}: {str(self.__dict__)}'
 
     def enqueue(self, item):
         node = Node(item)
@@ -46,9 +52,6 @@ class Queue:
     def is_empty(self):
         return self.length == 0
 
-    def size(self):
-        return self.length
-
 
 queue = Queue()
 print(f'is empty: {queue.is_empty()}')
@@ -57,7 +60,7 @@ for x in range(10):
     queue.enqueue(x)
 
 print(f'deque: {queue.dequeue()}')
-print(f'size: {queue.size()}')
+print(f'size: {len(queue)}')
 
 for item in queue:
     print(item)
@@ -69,4 +72,4 @@ for item in queue:
     queue.dequeue()
 
 print(f'is empty: {queue.is_empty()}')
-print(f'size: {queue.size()}')
+print(f'size: {len(queue)}')

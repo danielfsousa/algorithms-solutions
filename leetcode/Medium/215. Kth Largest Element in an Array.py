@@ -24,7 +24,7 @@ class SolutionQuickSelect:
         Time complexity:  O(n) amortized / O(n^2) worst case
         Space complexity: O(1)
         """
-        shuffle(nums) # we shuffle to get a O(n) in the average case
+        shuffle(nums)  # we shuffle to get a O(n) in the average case
         return self.quick_select(nums, len(nums) - k)
 
     def quick_select(self, arr, num) -> int:
@@ -51,13 +51,13 @@ class SolutionQuickSelect:
                     break
             # find item on right to swap
             while arr[low] <= arr[j]:
-                j += 1
+                j -= 1
                 if j == low:
                     break
             # stop if pointers cross
             if i >= j:
                 break
-            #swap
+            # swap
             arr[i], arr[j], arr[j], arr[i]
         # swap with partitioning item
         arr[low], arr[j], arr[j], arr[low]

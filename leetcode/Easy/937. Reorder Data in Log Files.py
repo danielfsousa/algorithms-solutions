@@ -5,14 +5,13 @@ from typing import List
 
 
 class Solution:
-    """
-    Keeps a list to numbers logs and a heap to sort words logs based on id, then concatenate them.
-
-    Time complexity:  O(n log n)
-    Space complexity: O(n)
-    """
-
     def reorderLogFiles(self, logs: List[str]) -> List[str]:
+        """
+        Keeps a list to numbers logs and a heap to sort words logs based on id, then concatenate them.
+
+        Time complexity:  O(n log n)
+        Space complexity: O(n)
+        """
         letter_logs = []
         digit_logs = []
         result = []

@@ -1,3 +1,5 @@
+# https://leetcode.com/problems/k-closest-points-to-origin/
+
 from typing import List
 from heapq import heappush, heappushpop
 
@@ -7,7 +9,7 @@ class Solution:
         """
         quick select recursive implementation
 
-        Time complexity:  O(n) amortized / O(n ^ 2) worst case
+        Time complexity:  O(n) amortized / O(n^2) worst case
         Space complexity: O(n)
         """
         def partition(points, low, high):

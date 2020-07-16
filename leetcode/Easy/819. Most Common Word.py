@@ -8,7 +8,7 @@ from typing import List
 class Solution:
     def mostCommonWord(self, paragraph: str, banned: List[str]) -> str:
         """
-        Time complexity:  O(n)
+        Time complexity:  O(n log k)
         Space compelxity: O(n)
         """
         banned = set(banned)

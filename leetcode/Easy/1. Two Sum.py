@@ -6,7 +6,7 @@ from typing import List
 class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
         '''
-        Keeps numbers in a dictionary to get O(n) access
+        Cache numbers in a dictionary to get O(1) access
 
         Time complexity:  O(n)
         Space complexity: O(n)

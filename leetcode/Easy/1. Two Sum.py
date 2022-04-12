@@ -11,14 +11,12 @@ class Solution:
         Time complexity:  O(n)
         Space complexity: O(n)
         '''
-        nums_dict = dict()
-        for i in range(len(nums)):
-            current_num = nums[i]
-            wanted_num = target - current_num
-            wanted_num_index = nums_dict.get(wanted_num)
-            if wanted_num_index is not None:
-                return [wanted_num_index, i]
-            nums_dict[current_num] = i
+        seen = dict()
+        for idx, n in enumerate(nums):
+            want = target - n
+            if want in seen:
+                return [idx, seen[want]]
+            seen[n] = idx
         return [-1, -1]
 
 

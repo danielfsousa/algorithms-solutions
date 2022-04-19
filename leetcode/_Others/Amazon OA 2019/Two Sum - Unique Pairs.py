@@ -24,6 +24,6 @@ class Solution:
 
 # test
 
-print(Solution().twoSumUniquePairs([1, 1, 2, 45, 46, 46], 47)) # 2
-print(Solution().twoSumUniquePairs([1, 1], 2)) # 1
-print(Solution().twoSumUniquePairs([1, 5, 1, 5], 6)) # 1
+print(Solution().twoSumUniquePairs([1, 1, 2, 45, 46, 46], 47))  # 2
+print(Solution().twoSumUniquePairs([1, 1], 2))  # 1
+print(Solution().twoSumUniquePairs([1, 5, 1, 5], 6))  # 1

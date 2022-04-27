@@ -1,5 +1,6 @@
 # https://leetcode.com/problems/invert-binary-tree/
 
+from collections import deque
 from typing import Optional
 
 
@@ -18,13 +19,31 @@ class Solution:
 
         n = number of nodes
 
-        Time complexity:  O(n)
-        Space complexity: O(n)
+        Time complexity:  O(n) - n = tree nodes
+        Space complexity: O(h) - h = tree height
         """
         if root:
             root.left, root.right = root.right, root.left
             self.invertTree(root.left)
             self.invertTree(root.right)
+        return root
+
+    def invertTreeBFS(self, root: Optional[TreeNode]) -> Optional[TreeNode]:
+        """
+        Breadth first search
+
+        n = number of nodes
+
+        Time complexity:  O(n) - n = tree nodes
+        Space complexity: O(w) - w = tree width
+        """
+        queue = deque([root])
+        while queue:
+            node = queue.popleft()
+            if node:
+                node.left, node.right = node.right, node.left
+                queue.append(node.left)
+                queue.append(node.right)
         return root
 
 

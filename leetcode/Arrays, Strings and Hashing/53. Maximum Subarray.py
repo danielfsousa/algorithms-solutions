@@ -4,7 +4,7 @@ from typing import List
 class Solution:
     def maxSubArray(self, nums: List[int]) -> int:
         """
-        Sliding window.
+        Sliding window like
 
         Time complexity:  O(n)
         Space complexity: O(1)

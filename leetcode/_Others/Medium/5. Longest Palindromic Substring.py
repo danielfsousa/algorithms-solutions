@@ -7,7 +7,8 @@ class Solution:
         Expand Around Center
 
         We observe that a palindrome mirrors around its center.
-        Therefore, a palindrome can be expanded from its center, and there are only 2n - 12n−1 such centers.
+        Therefore, a palindrome can be expanded from its center,
+        and there are only 2n - 12n−1 such centers.
 
         Time complexity:  O(n^2)
         Space complexity: O(1)
